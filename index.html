@@ -1,0 +1,38 @@
+<html>
+<head>
+</head>
+<body>
+ 
+<form  action=''   method='POST'>
+ 
+    <h3>Выберите  цвет:</h3>
+    <select  name='colors'>
+        
+<option 
+<?php if(isset($_POST['colors']) && $_POST['colors'] =='red'){echo "selected='selected'";}?>  
+value="red">Красный</option>
+ 
+<option 
+<?php if(isset($_POST['colors']) && $_POST['colors'] =='blue'){echo "selected='selected'";}?> 
+value='blue'>Синий</option>
+
+<option 
+<?php if(isset($_POST['colors']) && $_POST['colors'] =='green'){echo "selected='selected'";}?>
+ value='green'>Зеленый</option>
+
+    </select>
+ 
+    <input   type='submit'      value='ok' />
+    
+</form>
+<?php
+ 
+    $color = $_POST['colors'];
+    
+    echo "<p style='color: $color;'>Hello World</p>";
+ 
+?>
+
+
+</body>
+</html>
